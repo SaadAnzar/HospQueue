@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-style {
+  background-color: #f8f9fa;
+  box-shadow: 2px 4px 13px 1px rgba(8, 8, 8, 0.04);
+}
+
+#logo {
+  display: initial;
+  font-family: "Poiret One", cursive;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: blue;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  padding: 0;
+}
+#logo1 {
+  display: initial;
+  font-family: "Poiret One", cursive;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: #fd5c63;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #525252;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: blue;
+}
+
+.hero-text h1 {
+  font-family: "Poiret One", cursive;
+  font-size: 3rem;
+  line-height: 1.25;
+  text-shadow: 5px 4px 11px rgba(0, 0, 0, 0.26);
+  letter-spacing: 1px;
+  color: #fd5c63;
+  text-transform: uppercase;
+}
+
+.txt{
+  color: #fd5c63;
+  
+}
+
+.card{
+  color: #523739;
+  background-color: rgb(210, 243, 255);
+}
+
+.footer {
+  position: relative;
+  bottom: 0%;
+  width: 100%;
+  padding: 0 0 1rem;
+  text-align: center;
+  transition: .4s;
+}
+
+.footer_copy {
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.footer_socials {
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: .25rem;
+}
+
+.uil {
+  font-size: 1.5rem;
+  padding: 0 .3rem;
+}
+
+/* media queries part starts here  */
+
+@media only screen and (max-width: 410px) {
+  .uil {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HospQueue</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg px-3 navbar-style bg-light navbar-light">
+        <div class="container">
+            <a href="#" class="navbar-brand" id="logo">Hosp<span id="logo1">Queue</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/join" class="nav-link">Queue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container w-75">
+            <div class="py-3">
+                <h3>Hey <strong>{{name}}</strong></h3><br>
+                <h5>Thank you for waiting in HospQueue!
+                    <a href="/queue">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                            viewBox="0 0 30 30">
+                            <path
+                                d="M 15 3 C 12.031398 3 9.3028202 4.0834384 7.2070312 5.875 A 1.0001 1.0001 0 1 0 8.5058594 7.3945312 C 10.25407 5.9000929 12.516602 5 15 5 C 20.19656 5 24.450989 8.9379267 24.951172 14 L 22 14 L 26 20 L 30 14 L 26.949219 14 C 26.437925 7.8516588 21.277839 3 15 3 z M 4 10 L 0 16 L 3.0507812 16 C 3.562075 22.148341 8.7221607 27 15 27 C 17.968602 27 20.69718 25.916562 22.792969 24.125 A 1.0001 1.0001 0 1 0 21.494141 22.605469 C 19.74593 24.099907 17.483398 25 15 25 C 9.80344 25 5.5490109 21.062074 5.0488281 16 L 8 16 L 4 10 z">
+                            </path>
+                        </svg>
+                    </a>
+                </h5>
+            </div>
+
+            <div class="py-3">
+                <h5>Your HospQueue ID:
+                    <h3>#{{spot}}</h3>
+                </h5><br>
+                <h5>
+                    {% if total_infront == 0 %} Your turn is up, you can go inside! {% else %} There are {{
+                    total_infront }} patients ahead of you, please wait for a while!
+                </h5>
+                {% endif %}
+                <br>
+                <h5>Have a great day!</h5>
+            </div>
+
+            <a href="/leave"><button class="btn btn-primary" id="submit" type="submit">Leave</button></a>
+        </div>
+    </section>
+
+    <br>
+    <footer class="footer mt-auto">
+        <hr class="container">
+        <div class="footer_copy">
+            &copy; 2022. &#10094;&#8725;&#10095; by&nbsp;<strong>Anzar Ahmad</strong>
+        </div>
+
+        <div class="footer_socials">
+            <a href="https://www.linkedin.com/in/anzarahmad" target="_blank" class="footer_social">
+                <i class="uil uil-linkedin text-primary"></i>
+            </a>
+
+            <a href="https://www.github.com/SaadAnzar" target="_blank" class="footer_social">
+                <i class="uil uil-github text-primary"></i>
+            </a>
+
+            <a href="https://www.instagram.com/saad.anzar" target="_blank" class="footer_social">
+                <i class="uil uil-instagram-alt text-primary"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
