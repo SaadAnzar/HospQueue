@@ -5,12 +5,6 @@ import json
 with open('auth.json') as r:
     config = json.load(r)
 
-create_script = '''CREATE TABLE IF NOT EXISTS patient(
-                    id SERIAL PRIMARY KEY,
-                    name VARCHAR(30) NOT NULL,
-                    birthday VARCHAR(30) NOT NULL,
-                    gender VARCHAR(15) NOT NULL,
-                    spot INT);'''
 # Class including all the actions' functionality
 class Actions:
     def __init__(self, config):
