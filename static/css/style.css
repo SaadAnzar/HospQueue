@@ -42,6 +42,10 @@
   color: blue;
 }
 
+.navbar-toggler{
+  border: none;
+}
+
 .hero-text h1 {
   font-family: "Poiret One", cursive;
   font-size: 3rem;
@@ -59,7 +63,7 @@
 
 .card{
   color: #523739;
-  background-color: rgb(210, 243, 255);
+  background-color: rgb(244 248 248);
 }
 
 .footer {
