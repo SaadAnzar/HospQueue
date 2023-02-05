@@ -13,8 +13,8 @@ app.config.update(
     MAIL_PORT='465',
     MAIL_USE_SSL=True,
     MAIL_USE_TSL=False,
-    MAIL_USERNAME='direghost001@gmail.com',
-    MAIL_PASSWORD='lgbvajmfnuontjlk'
+    MAIL_USERNAME='*********',
+    MAIL_PASSWORD='*********'
 )
 mail = Mail(app)
 
@@ -78,7 +78,7 @@ def contact():
 
         mail.send_message('HospQueue: New message from ' + name,
                           sender = email,
-                          recipients = ['direghost001@gmail.com'],
+                          recipients = ['*********'],
                           body = 'Email-ID: ' + email + '\n\n' + message,
                           )
 
